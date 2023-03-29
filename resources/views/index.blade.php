@@ -4,9 +4,10 @@
 <title>Speed Cars</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{{ asset('css/w3.css') }}">
+<link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 </style>
@@ -15,14 +16,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 
 <!-- Navigation Bar -->
 <div class="w3-bar w3-white w3-large nav-bar">
-  <a href="index.html" class="w3-bar-item w3-button w3-red w3-mobile"><img class = "logo" src="storage.photos.logo.png" alt="car logo" width="60" height="40" ></i>Speed Cars</a>
+  <a href="index.html" class="w3-bar-item w3-button w3-red w3-mobile"><img class = "logo" src="photos/logo.png" alt="car logo" width="60" height="40" ></i>Speed Cars</a>
   <a href="Cars.html" class="w3-bar-item w3-button w3-mobile">Cars</a>
   <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
   <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
 
-  
-
-  
 </div>
 <br><br><br>
 <!-- Header -->
@@ -48,7 +46,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 
   <div class="w3-row-padding w3-padding-16">
     <div class="w3-third w3-margin-bottom">
-      <img src="storage.photos.accent 1995.webp" alt="accent 1995" width="100%">
+      <img src="photos/accent 1995.webp" alt="accent 1995" width="100%">
       <div class="w3-container w3-white">
         <h3>Accent 1995</h3>
         <h6 class="w3-opacity">From $3000</h6>
@@ -58,7 +56,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       </div>
     </div>
     <div class="w3-third w3-margin-bottom">
-      <img src="storage.photos.lancer 1999.jpg" alt="lancer 1999" width="100%">
+      <img src="photos/lancer 1999.jpg" alt="lancer 1999" width="100%">
       <div class="w3-container w3-white">
         <h3>Lancer 1999</h3>
         <h6 class="w3-opacity">From $5000</h6>
@@ -68,7 +66,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       </div>
     </div>
     <div class="w3-third w3-margin-bottom">
-      <img src="storage.photos.accent 2018.webp" alt="accent 2018" width="100%"; height="360px">
+      <img src="photos/accent 2018.webp" alt="accent 2018" width="100%"; height="360px">
       <div class="w3-container w3-white">
         <h3>Accent 2018</h3>
         <h6 class="w3-opacity">From $12000</h6>
@@ -91,7 +89,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     </div>
     <div class="w3-col l8 12">
       <!-- Image of location/map -->
-      <img src="storage.photos.speedcars.jpg" class="w3-image w3-greyscale" style="width:80%;">
+      <img src="photos/speedcars.jpg" class="w3-image w3-greyscale" style="width:80%;">
     </div>
   </div>
   
@@ -152,6 +150,7 @@ function myMap() {
 }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 <!--
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
@@ -159,3 +158,6 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 
 </body>
 </html>
+
+
+

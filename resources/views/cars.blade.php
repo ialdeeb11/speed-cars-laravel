@@ -4,9 +4,10 @@
 <title>Speed Cars/cars</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{{ asset('css/w3.css') }}">
+<link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 </style>
@@ -15,7 +16,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 
 <!-- Navigation Bar -->
 <div class="w3-bar w3-white w3-large nav-bar">
-  <a href="index.html" class="w3-bar-item w3-button w3-red w3-mobile"><img class = "logo" src="./logo.png" alt="car logo" width="60" height="40" ></i>Speed Cars</a>
+  <a href="index.html" class="w3-bar-item w3-button w3-red w3-mobile"><img class = "logo" src="photos/logo.png" alt="car logo" width="60" height="40" ></i>Speed Cars</a>
   <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Cars</a>
   <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
   <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
@@ -37,7 +38,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
   
   
     <div class="car">
-        <img src="./accent 1995.webp" alt="accent 1995" class="car-image" >
+        <img src="photos/accent 1995.webp" alt="accent 1995" class="car-image" >
         <div class="w3-container w3-white">
           <h6>Accent 1995</h6>
           <h6 class="w3-opacity">From $3000</h6>
@@ -46,7 +47,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     </div>
      
     <div class="car">
-        <img src="./accent 1995.webp" alt="accent 1995" class="car-image" >
+        <img src="photos/accent 1995.webp" alt="accent 1995" class="car-image" >
         <div class="w3-container w3-white">
           <h6>Accent 1995</h6>
           <h6 class="w3-opacity">From $3000</h6>
@@ -55,7 +56,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     </div>
 
     <div class="car">
-        <img src="./accent 1995.webp" alt="accent 1995" class="car-image" >
+        <img src="photos/accent 1995.webp" alt="accent 1995" class="car-image" >
         <div class="w3-container w3-white">
           <h6>Accent 1995</h6>
           <h6 class="w3-opacity">From $3000</h6>
@@ -64,7 +65,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     </div>
 
     <div class="car">
-        <img src="./accent 1995.webp" alt="accent 1995" class="car-image" >
+        <img src="photos/accent 1995.webp" alt="accent 1995" class="car-image" >
         <div class="w3-container w3-white">
           <h6>Accent 1995</h6>
           <h6 class="w3-opacity">From $3000</h6>
@@ -73,7 +74,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     </div>
 
     <div class="car">
-        <img src="./accent 1995.webp" alt="accent 1995" class="car-image" >
+        <img src="photos/accent 1995.webp" alt="accent 1995" class="car-image" >
         <div class="w3-container w3-white">
           <h6>Accent 1995</h6>
           <h6 class="w3-opacity">From $3000</h6>
@@ -82,7 +83,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     </div>
 
     <div class="car">
-        <img src="./accent 1995.webp" alt="accent 1995" class="car-image" >
+        <img src="photos/accent 1995.webp" alt="accent 1995" class="car-image" >
         <div class="w3-container w3-white">
           <h6>Accent 1995</h6>
           <h6 class="w3-opacity">From $3000</h6>
@@ -91,7 +92,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     </div>
 
     <div class="car">
-        <img src="./accent 1995.webp" alt="accent 1995" class="car-image" >
+        <img src="photos/accent 1995.webp" alt="accent 1995" class="car-image" >
         <div class="w3-container w3-white">
           <h6>Accent 1995</h6>
           <h6 class="w3-opacity">From $3000</h6>
@@ -142,6 +143,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
      
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
 
 
