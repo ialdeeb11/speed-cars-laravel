@@ -9,20 +9,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+body {font-family: "Raleway", Arial, Helvetica, sans-serif;
+margin-top: 50px ; ;}
 </style>
 </head>`
 <body class="w3-light-grey">
 
 <!-- Navigation Bar -->
-<div class="w3-bar w3-white w3-large nav-bar">
+<div class="w3-bar w3-white w3-large nav-bar ">
   <a href="index.html" class="w3-bar-item w3-button w3-red w3-mobile"><img class = "logo" src="photos/logo.png" alt="car logo" width="60" height="40" ></i>Speed Cars</a>
-  <a href="Cars.html" class="w3-bar-item w3-button w3-mobile">Cars</a>
+  <a href="/cars" class="w3-bar-item w3-button w3-mobile">Cars</a>
   <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
   <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
 
 </div>
-<br><br><br>
+
 <!-- Header -->
 
 <header class="w3-display-container w3-content" style="max-width:1500px;">
@@ -78,7 +80,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     </div>
   </div>
 <div>
-  <button class="w3-button w3-block w3-red w3-margin-bottom" onclick="document.location='Cars.html'">See more cars</button>
+  <button class="w3-button w3-block w3-red w3-margin-bottom " onclick="document.location='/cars'">See more cars</button>
 </div>
 <br>
   <div class="w3-row-padding" id="about">
