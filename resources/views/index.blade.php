@@ -54,7 +54,7 @@ margin-top: 50px ; ;}
         <h6 class="w3-opacity">From $3000</h6>
         <p>1500cc</p>
         <p>centerlock</p>
-        <button class="w3-button w3-block w3-black w3-margin-bottom">See details</button>
+        <button class="w3-button w3-block w3-black w3-margin-bottom " onclick="document.location='/accent1995'" >See details</button>
       </div>
     </div>
     <div class="w3-third w3-margin-bottom">

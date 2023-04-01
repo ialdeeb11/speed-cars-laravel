@@ -24,3 +24,8 @@ Route::get('/cars', function () {
 Route::get('/cars', function () {
     return view('cars');
 });
+
+Route::get('/accent1995', function () {
+    return view('details');
+});
+
