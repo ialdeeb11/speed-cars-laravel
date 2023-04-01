@@ -9,14 +9,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+body {font-family: "Raleway", Arial, Helvetica, sans-serif;
+margin-top: 100px ; ;}
 
 table, th, td {
   border:1px solid black;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   width: 500px;
-  height: 40px;
+  height: 40px;o
   text-align: center;
 }
 </style>
@@ -24,9 +26,9 @@ table, th, td {
 <body class="w3-light-grey test-body">
 
 <!-- Navigation Bar -->
-<div class="w3-bar w3-white w3-large nav-bar">
-  <a href="#" class="w3-bar-item w3-button w3-red w3-mobile"><img class = "logo" src="/logo.png" alt="car logo" width="60" height="40" ></i>Speed Cars</a>
-  <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Cars</a>
+<div class="w3-bar w3-white w3-large nav-bar container">
+  <a href="/index" class="w3-bar-item w3-button w3-red w3-mobile"><img class = "logo" src="photos/logo.png" alt="car logo" width="60" height="40" ></i>Speed Cars</a>
+  <a href="/cars" class="w3-bar-item w3-button w3-mobile">Cars</a>
   <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
   <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
 
@@ -34,16 +36,13 @@ table, th, td {
 
   
 </div>
-<br><br><br>
-
-
-<img src="/accent 1995.webp" alt="accent 1995"  style="margin-left: 75px; float: left;">
-
 
 <h1 style="margin-left: 75px ;float:left;" class="w3-sans-serif" >Hyndai Accent 1995 - 3000$</h1>
 
+<img src="photos/accent 1995.webp" alt="accent 1995" calss="rounded" style="margin-left: 75px; float: left;">
 
-<table style=" margin-left: 75px; float:left;">
+
+<table class="table table-sm style=" margin-top: 75px; float:left;">
  
     <tr>
       <td>Car Make</td>
@@ -91,9 +90,9 @@ table, th, td {
 
 <br><br><br>
 
-  <img src="/accent-1.jpg" alt="accent 1995"  style="margin: 75px;  width: 350px; height: 250px;">.
-  <img src="/accent-2.jpg" alt="accent 1995"  style="margin: 75px;  width: 200px; height: 250px;">.
-  <img src="/accent-3.jpg" alt="accent 1995"  style="margin: 75px;  width: 150px; height: 250px;">.
+  <img src="photos/accent-1.jpg" alt="accent 1995" class="rounded float-start">.
+  <img src="photos/accent-2.jpg" alt="accent 1995" class="rounded float-start">.
+  <img src="photos/accent-3.jpg" alt="accent 1995" class="rounded float-start">.
 
 
 <br><br>

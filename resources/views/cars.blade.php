@@ -9,7 +9,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+body {font-family: "Raleway", Arial, Helvetica, sans-serif;
+margin-top: 50px ; ;}
 </style>
 </head>`
 <body class="w3-light-grey  test-body">
@@ -101,7 +103,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     </div>
 
     <div class="car">
-        <img src="./accent 1995.webp" alt="accent 1995" class="car-image" >
+        <img src="photos/accent 1995.webp" alt="accent 1995" class="car-image" >
         <div class="w3-container w3-white">
           <h6>Accent 1995</h6>
           <h6 class="w3-opacity">From $3000</h6>
@@ -110,7 +112,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     </div>
 
     <div class="car">
-        <img src="./accent 1995.webp" alt="accent 1995" class="car-image" >
+        <img src="photos/accent 1995.webp" alt="accent 1995" class="car-image" >
         <div class="w3-container w3-white">
           <h6>Accent 1995</h6>
           <h6 class="w3-opacity">From $3000</h6>
