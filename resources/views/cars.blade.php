@@ -20,8 +20,10 @@ margin-top: 50px ; ;}
 <div class="w3-bar w3-white w3-large nav-bar zindex-fixed">
   <a href="/" class="w3-bar-item w3-button w3-red w3-mobile"><img class = "logo" src="photos/logo.png" alt="car logo" width="60" height="40" ></i>Speed Cars</a>
   <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Cars</a>
+  @if($showAbout)
   <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
   <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
+  @endif
 
   
 </div>

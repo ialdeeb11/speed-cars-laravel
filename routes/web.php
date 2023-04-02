@@ -14,18 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+
+    return view('index', ['showAbout' => true]);
 });
 
 Route::get('/cars', function () {
-    return view('cars');
+
+    return view('cars', ['showAbout' => false]);
 });
 
-Route::get('/cars', function () {
-    return view('cars');
-});
 
 Route::get('/accent1995', function () {
     return view('details');
 });
 
+Route::get('/test', function () {
+    return view('test',['title'=>'test'],['showAbout' => false]);
+});
