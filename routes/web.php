@@ -15,19 +15,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    return view('index', ['showAbout' => true]);
+    return view('index', ['showAbout' => true],['title'=>'Speed-Cars']);
 });
 
 Route::get('/cars', function () {
 
-    return view('cars', ['showAbout' => false]);
+    return view('cars', ['showAbout' => false],['title'=>'Cars']);
 });
 
 
 Route::get('/accent1995', function () {
-    return view('details');
+    return view('details',['showAbout' => false],['title'=>'Accent 1995']);
 });
 
+
+
 Route::get('/test', function () {
-    return view('test',['title'=>'test'],['showAbout' => false]);
+    return view('test',['showAbout' => false],['title'=>'test']);
 });

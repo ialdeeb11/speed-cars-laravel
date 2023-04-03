@@ -1762,8 +1762,10 @@ a {
     width: 250px;
     height: 250px;
     float: left;
-    margin-left: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .car-image {
@@ -1793,7 +1795,8 @@ a {
 }
 
 .photo {
-    margin-left: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
     
 }
 
