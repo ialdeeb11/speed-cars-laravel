@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,23 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', [CarController::class,'index']);
 
-    return view('index', ['showAbout' => true],['title'=>'Speed-Cars']);
-});
+Route::get('/cars', [CarController::class,'carsList']);
 
-Route::get('/cars', function () {
-
-    return view('cars', ['showAbout' => false],['title'=>'Cars']);
-});
-
-
-Route::get('/accent1995', function () {
-    return view('details',['showAbout' => false],['title'=>'Accent 1995']);
-});
-
-
-
-Route::get('/test', function () {
-    return view('test',['showAbout' => false],['title'=>'test']);
-});
+Route::get('/accent1995', [CarController::class,'carDetails']);
