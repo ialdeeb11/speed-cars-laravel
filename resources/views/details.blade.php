@@ -64,6 +64,6 @@
 
 <br><br>
 
-</div>
+
 
 @endsection
