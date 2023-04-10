@@ -11,10 +11,10 @@
 <style>
 h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 body {font-family: "Raleway", Arial, Helvetica, sans-serif;
-margin-top: 50px ; ;}
+margin-top: 50px ; background-color: #d3d3d3;}
 </style>
 </head>
-<body class="w3-light-grey">
+<body >
 
 
 

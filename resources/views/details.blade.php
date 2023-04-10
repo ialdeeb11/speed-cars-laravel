@@ -55,14 +55,6 @@
   </table>
 
 
-<br><br><br>
-
-  <img src="photos/accent-1.jpg" alt="accent 1995" class="rounded float-start photo">.
-  <img src="photos/accent-2.jpg" alt="accent 1995" class="rounded float-start photo">.
-  <img src="photos/accent-3.jpg" alt="accent 1995" class="rounded float-start photo">.
-
-
-<br><br>
 
 
 

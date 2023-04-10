@@ -17,7 +17,7 @@
 </header>
 
 @foreach($cars as $car)
-@include('list.car',['path' => $car->imagePath,'model'=> $car->model,'year'=> $car->year,'price'=> $car->price])
+@include('list.car',['path' => $car->imagePath,'model'=> $car->model,'year'=> $car->year,'price'=> $car->price,'motorSize'=> $car->motorSize])
 @endforeach
 
     
