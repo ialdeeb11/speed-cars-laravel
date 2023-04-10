@@ -25,6 +25,7 @@ class CarController extends Controller
 
 
         $cars = DB::table('cars')->get();
+    
 
 
         

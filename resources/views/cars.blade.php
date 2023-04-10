@@ -17,13 +17,12 @@
 </header>
 
 @foreach($cars as $car)
-@include('list.car',['title' => $car->name])
+@include('list.car',['path' => $car->imagePath,'model'=> $car->model,'year'=> $car->year,'price'=> $car->price])
 @endforeach
 
     
 
 @endsection
-
 
 
 
