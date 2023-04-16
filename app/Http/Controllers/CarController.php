@@ -36,12 +36,15 @@ class CarController extends Controller
     public function carDetails()
     {
 
+        $car = DB::table('cars')->first();
 
 
 
 
 
 
-        return view('details', ['showAbout' => false ,'title'=>'Speed-Cars']);
+
+        return view('details', ['showAbout' => false ,'title'=>'Speed-Cars', 'carMake'=>$car->carMake,'path' => $car->imagePath,'model'=> $car->model,'year'=> $car->year,'price'=> $car->price,'motorSize'=> $car->motorSize,'gear'=>$car->gear,'color'=>$car->color,'license'=>$car->license,'fuel'=>$car->fuel,'used'=>$car->used,'customs'=>$car->customs,'insurance'=>$car->insurance]);
     }
 }
+
