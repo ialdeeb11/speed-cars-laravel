@@ -9,7 +9,7 @@
     <h4>Search for a spesfic car:
       <form action="">
         <label for="search"></label>
-        <input type="search" id="search" placeholder="Accent 1995">
+        <input type="search" name="search" placeholder="Accent 1995">
         <input type="submit" value="Search">
         </form>
     </h4>
@@ -17,7 +17,7 @@
 </header>
 
 @foreach($cars as $car)
-@include('list.car',['path' => $car->imagePath,'model'=> $car->model,'year'=> $car->year,'price'=> $car->price,'motorSize'=> $car->motorSize])
+  @include('list.car',['car' => $car])
 @endforeach
 
     

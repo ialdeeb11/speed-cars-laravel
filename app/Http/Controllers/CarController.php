@@ -19,12 +19,18 @@ class CarController extends Controller
         return view('index', ['showAbout' => true ,'title'=>'Speed-Cars']);
     }
 
-    public function carsList()
+    public function carsList(Request $request)
     {
 
+        if($request->search){
+            $cars = DB::table('cars')
+            ->where('carMake','like',"%$request->search%")
+            ->get();
 
+        }else{
 
-        $cars = DB::table('cars')->get();
+            $cars = DB::table('cars')->get();
+        }
     
 
 
@@ -33,18 +39,12 @@ class CarController extends Controller
 
     }
 
-    public function carDetails()
+    public function carDetails($id)
     {
 
-        $car = DB::table('cars')->first();
+        $car = DB::table('cars')->where('id',$id)->first();
 
-
-
-
-
-
-
-        return view('details', ['showAbout' => false ,'title'=>'Speed-Cars', 'carMake'=>$car->carMake,'path' => $car->imagePath,'model'=> $car->model,'year'=> $car->year,'price'=> $car->price,'motorSize'=> $car->motorSize,'gear'=>$car->gear,'color'=>$car->color,'license'=>$car->license,'fuel'=>$car->fuel,'used'=>$car->used,'customs'=>$car->customs,'insurance'=>$car->insurance]);
+        return view('details', ['showAbout' => false ,'title'=>'Speed-Cars', 'car'=>$car]);
     }
 }
 

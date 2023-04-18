@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,16 @@ use App\Http\Controllers\CarController;
 */
 
 Route::get('/', [CarController::class,'index']);
-
 Route::get('/cars', [CarController::class,'carsList']);
+Route::get('/car-details/{id}', [CarController::class,'carDetails']);
 
-Route::get('/accent1995', [CarController::class,'carDetails']);
+
+
+// admin
+Route::get('/admin', [AdminController::class,'index']);
+Route::get('/admin/cars', [AdminController::class,'carsList']);
+Route::get('/admin/create-car', [AdminController::class,'create']);
+Route::post('/admin/add-car', [AdminController::class,'add']);
+Route::delete('/admin/delete-car/{id}', [AdminController::class,'delete']);
+Route::get('/admin/view-car/{id}', [AdminController::class,'view']);
+Route::post('/admin/update-car/{id}', [AdminController::class,'update']);

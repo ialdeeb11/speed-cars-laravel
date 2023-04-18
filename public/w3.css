@@ -1769,7 +1769,7 @@ a {
 }
 
 .car-image {
-    width: inherit;
+    max-width: 1200px;
     height: 75%; 
 
 }

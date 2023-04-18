@@ -12,6 +12,9 @@
 h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 body {font-family: "Raleway", Arial, Helvetica, sans-serif;
 margin-top: 50px ; background-color: #d3d3d3;}
+.content{
+  margin: 100px;
+}
 </style>
 </head>
 <body >
@@ -20,10 +23,7 @@ margin-top: 50px ; background-color: #d3d3d3;}
 
 <div class="w3-bar w3-white w3-large nav-bar ">
   <a href="/" class="w3-bar-item w3-button w3-red w3-mobile"><img class = "logo" src="/photos/logo.png" alt="car logo" width="60" height="40" ></i>Speed Cars</a>
-  <a href="/cars" class="w3-bar-item w3-button w3-mobile">Cars</a>
-  @if(isset($showAbout) && $showAbout)
-  <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
-  @endif
-  <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
+  <a href="/admin/cars" class="w3-bar-item w3-button w3-mobile">Cars</a>
+
   
 </div>
