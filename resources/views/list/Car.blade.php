@@ -1,5 +1,5 @@
 <div class="car">
-        <img src="{{$car->imagePath}}" alt="{{$car->model}} {{$car->year}}" class="car-image" >
+        <img src="/{{$car->imagePath}}" alt="{{$car->model}} {{$car->year}}" class="car-image" >
         <div class="w3-container w3-white">
           <h6>{{$car->model}} {{$car->year}}</h6>
           <h6 class="w3-opacity">${{$car->price}}</h6>

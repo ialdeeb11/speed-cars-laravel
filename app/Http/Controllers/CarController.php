@@ -46,5 +46,28 @@ class CarController extends Controller
 
         return view('details', ['showAbout' => false ,'title'=>'Speed-Cars', 'car'=>$car]);
     }
+
+
+
+    public function brandsList(Request $request)
+    {
+
+        if($request->search){
+            $brands = DB::table('brands')
+            ->where('brandName','like',"%$request->search%")
+            ->get();
+
+        }else{
+
+            $brands = DB::table('brands')->get();
+        }
+    
+
+
+        
+        return view('brands', ['showAbout' => false,'title'=>'Brands', 'brands' => $brands ]);
+
+    }
+
 }
 
