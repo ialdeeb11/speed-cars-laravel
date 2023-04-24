@@ -9,7 +9,7 @@
     <h4>Search for a spesfic car:
       <form action="">
         <label for="search"></label>
-        <input type="search" name="search" placeholder="Accent 1995">
+        <input type="search" name="search" placeholder="Huyndai">
         <input type="submit" value="Search">
         </form>
     </h4>

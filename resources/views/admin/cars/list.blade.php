@@ -1,8 +1,12 @@
 @extends('admin.layout')
 
 @section('content')
+<button onclick="document.location='/admin/create-car'">Create Car</button>
 
-<a href="/admin/create-car"> create car </a>
+
+
+
+
 <table style="width:85%;margin: 100px 50px;border: 1px solid #000;">
     <tr>
       <th>id</th>

@@ -47,10 +47,7 @@
     <label for="imagePath">imagePath:</label><br>
     <input type="text"  name="imagePath" value=""><br><br>
 
-    <label for="test">test:</label><br>
-    <input type="text"  name="test" value=""><br><br>
-    <label for="test2">test2:</label><br>
-    <input type="text"  name="test2" value=""><br><br>
+  
     <input type="submit" value="Submit">
   </form>
 

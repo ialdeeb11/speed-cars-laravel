@@ -6,10 +6,10 @@
 <header class="w3-display-container w3-content" style="max-width:1500px; margin-top:100px">
   <h4>Search for a spesfic car:
     <form action="">
-    <label for="search"></label>
-    <input type="search" id="search" placeholder="Accent 1995">
-    <input type="submit" value="Search">
-  </form>
+      <label for="search"></label>
+      <input type="search" name="search" placeholder="Huyndai">
+      <input type="submit" value="Search">
+      </form>
   </h4>
 
 </header>

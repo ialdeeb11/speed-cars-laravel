@@ -48,13 +48,7 @@
     <label for="imagePath">imagePath:</label><br>
     <input type="text"  name="imagePath" value="{{$car->imagePath}}"><br><br>
 
-    <label for="test">test:</label><br>
-    <input type="text"  name="test" value="{{$car->test}}"><br><br>
-    <label for="test2">test2:</label><br>
-    <input type="text"  name="test2" value="{{$car->test2}}"><br><br>
 
-    <label for="newnew">newnew:</label><br>
-    <input type="text"  name="newnew" value="{{$car->newnew}}"><br><br>
 
   
     <input type="submit" value="Submit">

@@ -50,8 +50,7 @@ class AdminController extends Controller
             'customs' => $request->customs,
             'insurance' => $request->insurance,
             'imagePath' => $request->imagePath,
-            'test' => $request->test,
-            'test2' => $request->test2,
+            
         ]);
 
 
@@ -82,9 +81,7 @@ class AdminController extends Controller
             'customs' => $request->customs,
             'insurance' => $request->insurance,
             'imagePath' => $request->imagePath,
-            'test' => $request->test,
-            'test2' => $request->test2,
-            'newnew' => $request->newnew
+            
         ]);
 
 
