@@ -45,8 +45,12 @@
     <label for="insurance">insurance:</label><br>
     <input type="text"  name="insurance" value="{{$car->insurance}}"><br><br>
 
-    <label for="imagePath">imagePath:</label><br>
+    <label for="imagePath">Image Path:</label><br>
     <input type="text"  name="imagePath" value="{{$car->imagePath}}"><br><br>
+
+    
+    <label for="frontPage">Front Page Car:</label><br>
+    <input type="boolean"  name="frontPage" value="{{$car->frontPage}}"><br><br>
 
 
 

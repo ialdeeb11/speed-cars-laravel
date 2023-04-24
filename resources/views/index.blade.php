@@ -23,37 +23,11 @@
 
 
   <div class="w3-row-padding w3-padding-16">
-    <div class="w3-third w3-margin-bottom">
-      <img src="photos/accent 1995.jpg" alt="accent 1995" width="100%">
-      <div class="w3-container w3-white">
-        <h3>Accent 1995</h3>
-        <h6 class="w3-opacity">From $3000</h6>
-        <p>1500cc</p>
-        <p>centerlock</p>
-        <button class="w3-button w3-block w3-black w3-margin-bottom " onclick="document.location='/accent1995'" >See details</button>
-      </div>
-    </div>
-    <div class="w3-third w3-margin-bottom">
-      <img src="photos/lancer 1999.jpg" alt="lancer 1999" width="100%">
-      <div class="w3-container w3-white">
-        <h3>Lancer 1999</h3>
-        <h6 class="w3-opacity">From $5000</h6>
-        <p>1600cc</p>
-        <p>centerlock</p>
-        <button class="w3-button w3-block w3-black w3-margin-bottom">See details</button>
-      </div>
-    </div>
-    <div class="w3-third w3-margin-bottom">
-      <img src="photos/accent 2018.jpg" alt="accent 2018" width="100%";>
-      <div class="w3-container w3-white">
-        <h3>Accent 2018</h3>
-        <h6 class="w3-opacity">From $12000</h6>
-        <p>1800cc</p>
-        <p>Full option</p>
+    @foreach ($frontPageCars as $car)
+
+    @include('frontPageCar')
         
-        <button class="w3-button w3-block w3-black w3-margin-bottom">See details</button>
-      </div>
-    </div>
+    @endforeach
   </div>
 <div>
   <button class="w3-button w3-block w3-red w3-margin-bottom " onclick="document.location='/cars'">See more cars</button>

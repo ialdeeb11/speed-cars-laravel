@@ -9,6 +9,7 @@ class CarController extends Controller
 {
     public function index()
     {
+        $frontPageCars = DB::table('cars')->where('frontPage',1)->get();
 
 
 
@@ -16,7 +17,7 @@ class CarController extends Controller
 
 
 
-        return view('index', ['showAbout' => true ,'title'=>'Speed-Cars']);
+        return view('index', ['showAbout' => true ,'title'=>'Speed-Cars','frontPageCars'=>$frontPageCars]);
     }
 
     public function carsList(Request $request)
