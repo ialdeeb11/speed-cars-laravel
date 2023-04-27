@@ -12,21 +12,20 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('cars', function (Blueprint $table) {
-            $table->string('carMake');
-            $table->string('model');
-            $table->integer('year');
-            $table->integer('price');
-            $table->string('gear');
-            $table->string('color');
-            $table->string('license');
-            $table->string('fuel');
-            $table->string('conndition');
-            $table->string('customs');
-            $table->string('insurance');
-            $table->string('image_path_1');
-            $table->string('image_path_2');
-            $table->string('image_path_3');
-            $table->string('image_path_4');
+            $table->string('carMake')->nullable();
+            $table->string('model')->nullable();
+            $table->integer('year')->nullable();
+            $table->integer('price')->nullable();
+            $table->integer('motorSize')->nullable();
+            $table->string('gear')->nullable();
+            $table->string('color')->nullable();
+            $table->string('license')->nullable();
+            $table->string('fuel')->nullable();
+            $table->string('used')->nullable();
+            $table->string('customs')->nullable();
+            $table->string('insurance')->nullable();
+            $table->string('imagePath')->nullable();
+           
         });
     }
 

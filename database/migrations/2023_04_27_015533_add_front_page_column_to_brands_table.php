@@ -11,9 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('cars', function (Blueprint $table) {
-            $table->string('new new');
-            
+        Schema::table('brands', function (Blueprint $table) {
+            $table->boolean('frontPage')->nullable();
         });
     }
 
@@ -22,7 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('cars', function (Blueprint $table) {
+        Schema::table('brands', function (Blueprint $table) {
             //
         });
     }

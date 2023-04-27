@@ -10,30 +10,38 @@ class CarController extends Controller
     public function index()
     {
         $frontPageCars = DB::table('cars')->where('frontPage',1)->get();
+        $frontPageBrands = DB::table('brands')->where('frontPage',1)->get();
 
 
 
 
 
 
-
-        return view('index', ['showAbout' => true ,'title'=>'Speed-Cars','frontPageCars'=>$frontPageCars]);
+        return view('index', ['showAbout' => true ,'title'=>'Speed-Cars','frontPageCars'=>$frontPageCars,'frontPageBrands'=>$frontPageBrands]);
     }
 
-    public function carsList(Request $request)
+    public function carsList(Request $request, $brandName = null)
     {
+        $query = DB::table('cars');
+
+
+        if($brandName){
+            $cars = $query->where('carMake',$brandName);
+
+        }
 
         if($request->search){
-            $cars = DB::table('cars')
-            ->where('carMake','like',"%$request->search%")
-            ->get();
-
-        }else{
-
-            $cars = DB::table('cars')->get();
+            $cars = $query->where('carMake','like',"%$request->search%")
+            ->orWhere('year',$request->search)
+            ->orWhere('model','like',"%$request->search%");
         }
-    
 
+
+
+        $cars = $query->get();
+      
+    
+        
 
         
         return view('cars', ['showAbout' => false,'title'=>'Cars', 'cars' => $cars ]);

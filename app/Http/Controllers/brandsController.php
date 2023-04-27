@@ -66,15 +66,5 @@ public function delete($id){
 
 }
 
-public function carsOfBrand($brandName){
-     
-    $carsOfBrand = DB::table('cars') -> where('carMake',$brandName)->get();
 
-
-    return view('/cars',['cars'=>$carsOfBrand]);
-
-
-
-
-}
 }

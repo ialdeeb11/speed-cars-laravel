@@ -5,7 +5,7 @@
 
 <header class="w3-display-container w3-content" style="max-width:1500px; margin-top:100px">
   <h4>Search for a spesfic car:
-    <form action="">
+    <form action="/cars">
       <label for="search"></label>
       <input type="search" name="search" placeholder="Huyndai">
       <input type="submit" value="Search">
@@ -18,8 +18,21 @@
 <div class="w3-content" style="max-width:1532px;">
 
   <div class="w3-container w3-margin-top" id="rooms">
+    <h3>Brands</h3>
+
+    <div class="w3-row-padding w3-padding-16">
+      @foreach ($frontPageBrands as $brand)
+  
+      @include('frontPageBrand')
+          
+      @endforeach
+    </div>
+
+
+
+
     <h3>Cars</h3>
-    <p>Be sure that you will get the best service here </p>
+   
 
 
   <div class="w3-row-padding w3-padding-16">

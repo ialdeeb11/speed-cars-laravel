@@ -16,11 +16,12 @@ use App\Http\Controllers\brandsController;
 |
 */
 
+
+// main
 Route::get('/', [CarController::class,'index']);
-Route::get('/cars', [CarController::class,'carsList']);
+Route::get('/cars/{brandName?}', [CarController::class,'carsList']);
 Route::get('/car-details/{id}', [CarController::class,'carDetails']);
 Route::get('/brands', [CarController::class,'brandsList']);
-
 
 
 // admin
@@ -40,5 +41,5 @@ Route::post('/admin/add-brand', [brandsController::class,'add']);
 Route::delete('/admin/delete-brand/{id}', [brandsController::class,'delete']);
 Route::get('/admin/view-brand/{id}', [brandsController::class,'view']);
 Route::post('/admin/update-brand/{id}', [brandsController::class,'update']);
-Route::get('/brand-cars/{brandName}', [brandsController::class,'carsOfBrand']);
+
 

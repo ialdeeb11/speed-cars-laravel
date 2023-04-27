@@ -7,7 +7,7 @@
 
 <header style="margin-top: 100px;">
     <h4>Search for a spesfic car:
-      <form action="">
+      <form action="/cars">
         <label for="search"></label>
         <input type="search" name="search" placeholder="Huyndai">
         <input type="submit" value="Search">
