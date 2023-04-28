@@ -1,3 +1,5 @@
+
+
 @extends('layout')
 
 @section('content')
@@ -20,7 +22,10 @@
   @include('list.car',['car' => $car])
 @endforeach
 
-    
+
+<div class="link">
+    {{ $cars->links() }}
+</div>
 
 @endsection
 

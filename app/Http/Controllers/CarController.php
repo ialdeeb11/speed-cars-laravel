@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Pagination\Paginator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -22,6 +23,9 @@ class CarController extends Controller
 
     public function carsList(Request $request, $brandName = null)
     {
+        Paginator::useBootstrapFive();
+
+
         $query = DB::table('cars');
 
 
@@ -38,7 +42,7 @@ class CarController extends Controller
 
 
 
-        $cars = $query->get();
+        $cars = $query->paginate(3);
       
     
         
@@ -77,6 +81,8 @@ class CarController extends Controller
         return view('brands', ['showAbout' => false,'title'=>'Brands', 'brands' => $brands ]);
 
     }
+
+   
 
 }
 

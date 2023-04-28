@@ -1846,6 +1846,14 @@ a {
     margin: auto;
     width: 260px;
 
-    
+}
+
+.link{
+    WIDTH: 100%;
+    margin-top: 200PX;
+    margin-bottom: 10PX;
+    JUSTIFY-CONTENT: CENTER;
+    DISPLAY: FLEX;
+    position: RELATIVE;
 
 }

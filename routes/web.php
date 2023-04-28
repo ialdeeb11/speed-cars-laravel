@@ -34,6 +34,12 @@ Route::get('/admin/view-car/{id}', [AdminController::class,'view']);
 Route::post('/admin/update-car/{id}', [AdminController::class,'update']);
 
 
+// contact
+Route::post('/sendMessage', [AdminController::class,'sendMessage']);
+Route::get('/admin/messages', [AdminController::class,'viewMessages']);
+Route::delete('/admin/deleteMessage/{id}', [AdminController::class,'deleteMessage']);
+
+
 // brands
 Route::get('/admin/brands', [brandsController::class,'brandsList']);
 Route::get('/admin/create-brand', [brandsController::class,'create']);
@@ -41,5 +47,7 @@ Route::post('/admin/add-brand', [brandsController::class,'add']);
 Route::delete('/admin/delete-brand/{id}', [brandsController::class,'delete']);
 Route::get('/admin/view-brand/{id}', [brandsController::class,'view']);
 Route::post('/admin/update-brand/{id}', [brandsController::class,'update']);
+
+
 
 

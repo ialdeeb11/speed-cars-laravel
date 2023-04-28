@@ -97,4 +97,38 @@ class AdminController extends Controller
 
 
     }
+
+
+
+    public function sendMessage(Request $request){
+
+        DB::table('contact')->insert([
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+            
+        ]);
+
+
+        return redirect('/');
+
+    }
+
+    public function viewMessages()
+    {
+
+        $messages = DB::table('contact')->get();
+
+        return view('admin.contact.list',['messages'=>$messages]);
+    }
+
+
+    public function deleteMessage($id){
+
+        DB::table('contact')->where('id',$id)->delete();
+        return redirect('/admin/messages');
+
+
+    }
+
 }
