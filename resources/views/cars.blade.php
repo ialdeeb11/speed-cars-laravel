@@ -24,7 +24,7 @@
 
 
 <div class="link">
-    {{ $cars->links() }}
+    {{ $cars->appends(request()->input())->links()}}
 </div>
 
 @endsection

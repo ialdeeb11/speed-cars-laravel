@@ -10,7 +10,7 @@
 <table style="width:85%;margin: 100px 50px;border: 1px solid #000;">
     <tr>
       <th>id</th>
-      <th>carMake</th>
+      <th>brand</th>
       <th>model</th>
       <th>color</th>
       <th>action</th>
@@ -18,7 +18,7 @@
     @foreach($cars as $car)
     <tr style="border: 1px solid #000;">
       <td>{{$car->id}}</td>
-      <td>{{$car->carMake}}</td>
+      <td>{{$car->brandName}}</td>
       <td>{{$car->model}}</td>
       <td>{{$car->color}}</td>
       <td>  

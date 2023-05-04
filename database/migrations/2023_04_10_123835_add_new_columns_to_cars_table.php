@@ -12,18 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('cars', function (Blueprint $table) {
-            $table->string('carMake')->nullable();
             $table->string('model')->nullable();
             $table->integer('year')->nullable();
             $table->integer('price')->nullable();
             $table->integer('motorSize')->nullable();
             $table->string('gear')->nullable();
             $table->string('color')->nullable();
-            $table->string('license')->nullable();
             $table->string('fuel')->nullable();
             $table->string('used')->nullable();
-            $table->string('customs')->nullable();
-            $table->string('insurance')->nullable();
             $table->string('imagePath')->nullable();
            
         });

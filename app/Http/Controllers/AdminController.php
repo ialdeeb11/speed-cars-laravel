@@ -21,36 +21,42 @@ class AdminController extends Controller
 
 
 
-        $cars = DB::table('cars')->get();
+        $cars = DB::table('cars')
+        ->join('brands', 'cars.brandID', '=', 'brands.id')
+        ->select('cars.*','brands.imagePath as brandImagePath','brands.brandName as brandName')
+        ->get();
     
 
 
         
-        return view('admin.cars.list', ['title'=>'Cars', 'cars' => $cars ]);
+        return view('admin.cars.list', ['title'=>'Cars', 'cars' => $cars]);
 
     }
 
     public function create()
     {
-       return view('admin.cars.create');
+
+        $brands = DB::table('brands')->get();
+
+       return view('admin.cars.create',['brands'=>$brands]);
     }
+
+
     public function add(Request $request)
     {
         DB::table('cars')->insert([
-            'color' => $request->color,
-            'carMake' => $request->carMake,
+            'brandID' => $request->brandID,
             'model' => $request->model,
             'year' => $request->year,
             'price' => $request->price,
+            'color' => $request->color,
             'motorSize' => $request->motorSize,
             'gear' => $request->gear,
-            'license' => $request->license,
             'fuel' => $request->fuel,
             'used' => $request->used,
-            'customs' => $request->customs,
-            'insurance' => $request->insurance,
             'imagePath' => $request->imagePath,
             'frontPage' => $request->frontPage,
+            
             
         ]);
 
@@ -62,27 +68,27 @@ class AdminController extends Controller
     public function view($id)
     {
         $car = DB::table('cars')->where('id',$id)->first();
-       return view('admin.cars.view',['car' => $car]);
+        $brands = DB::table('brands')->get();
+
+       return view('admin.cars.view',['car' => $car,'brands'=>$brands]);
     }
 
     public function update(Request $request,$id)
     {
         
         DB::table('cars')->where('id',$id)->update([
-            'color' => $request->color,
-            'carMake' => $request->carMake,
+            'brandID' => $request->brandID,
             'model' => $request->model,
             'year' => $request->year,
             'price' => $request->price,
+            'color' => $request->color,
             'motorSize' => $request->motorSize,
             'gear' => $request->gear,
-            'license' => $request->license,
             'fuel' => $request->fuel,
             'used' => $request->used,
-            'customs' => $request->customs,
-            'insurance' => $request->insurance,
             'imagePath' => $request->imagePath,
             'frontPage' => $request->frontPage,
+            
             
         ]);
 

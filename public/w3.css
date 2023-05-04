@@ -1857,3 +1857,10 @@ a {
     position: RELATIVE;
 
 }
+
+.fullImage{
+        width: 45%;
+        max-width: 1000px;
+        height: 75%; 
+    
+}

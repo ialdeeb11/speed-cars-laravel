@@ -6,8 +6,13 @@
 
 <form action="/admin/update-car/{{$car->id}}" method="POST">
     @csrf
-    <label for="carMake">car Make:</label><br>
-    <input type="text"  name="carMake" value="{{$car->carMake}}"><br><br>
+
+    <select name="brandID">
+      @foreach ($brands as $brand)
+      <option @if($car->brandID == $brand->id)selected @endif value="{{$brand->id}}">{{$brand->brandName}}</option>
+      @endforeach
+    </select>
+
     <label for="color">color:</label><br>
     <input type="text"  name="color" value="{{$car->color}}"><br><br>
     <label for="model">model:</label><br>
@@ -27,11 +32,6 @@
     <input type="text"  name="gear"value="{{$car->gear}}"><br><br>
 
  
-
-    
-    <label for="license">license:</label><br>
-    <input type="text"  name="license" value="{{$car->license}}"><br><br>
-
     <label for="fuel">fuel:</label><br>
     <input type="text"  name="fuel" value="{{$car->fuel}}"><br><br>
 
@@ -39,11 +39,6 @@
     <label for="used">used:</label><br>
     <input type="text"  name="used" value="{{$car->used}}"><br><br>
         
-    <label for="customs">customs:</label><br>
-    <input type="text"  name="customs" value="{{$car->customs}}"><br><br>
-            
-    <label for="insurance">insurance:</label><br>
-    <input type="text"  name="insurance" value="{{$car->insurance}}"><br><br>
 
     <label for="imagePath">Image Path:</label><br>
     <input type="text"  name="imagePath" value="{{$car->imagePath}}"><br><br>
@@ -52,7 +47,8 @@
     <label for="frontPage">Front Page Car:</label><br>
     <input type="boolean"  name="frontPage" value="{{$car->frontPage}}"><br><br>
 
-
+ 
+    <br><br>
 
   
     <input type="submit" value="Submit">
@@ -68,3 +64,8 @@
 
 
 
+<select name="brand_id">
+  @foreach($brands as $brand)
+  <option @if($car->brand_id == $brand->id)selected @endif value="{{$brand->id}}">{{$brand->brandName}}</option>
+  @endforeach
+</select>

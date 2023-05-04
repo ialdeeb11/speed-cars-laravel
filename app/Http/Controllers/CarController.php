@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Pagination\Paginator;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -13,29 +13,25 @@ class CarController extends Controller
         $frontPageCars = DB::table('cars')->where('frontPage',1)->get();
         $frontPageBrands = DB::table('brands')->where('frontPage',1)->get();
 
-
-
-
-
-
         return view('index', ['showAbout' => true ,'title'=>'Speed-Cars','frontPageCars'=>$frontPageCars,'frontPageBrands'=>$frontPageBrands]);
     }
 
     public function carsList(Request $request, $brandName = null)
     {
-        Paginator::useBootstrapFive();
+        
 
-
-        $query = DB::table('cars');
+        $query = DB::table('cars')
+        ->join('brands', 'cars.brandID', '=', 'brands.id')
+        ->select('cars.*','brands.imagePath as brandImagePath','brands.brandName as brandName');
 
 
         if($brandName){
-            $cars = $query->where('carMake',$brandName);
+            $cars = $query->where('brandName',$brandName);
 
         }
 
         if($request->search){
-            $cars = $query->where('carMake','like',"%$request->search%")
+            $cars = $query->where('brandName','like',"%$request->search%")
             ->orWhere('year',$request->search)
             ->orWhere('model','like',"%$request->search%");
         }
@@ -55,7 +51,11 @@ class CarController extends Controller
     public function carDetails($id)
     {
 
-        $car = DB::table('cars')->where('id',$id)->first();
+        $car = DB::table('cars')->where('cars.id',$id)
+        ->join('brands', 'cars.brandID', '=', 'brands.id')
+        ->select('cars.*','brands.imagePath as brandImagePath','brands.brandName as brandName')
+        ->first();
+
 
         return view('details', ['showAbout' => false ,'title'=>'Speed-Cars', 'car'=>$car]);
     }

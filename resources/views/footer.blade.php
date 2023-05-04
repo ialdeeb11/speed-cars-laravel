@@ -5,7 +5,7 @@
     <i class="fa fa-phone w3-text-red" style="width:30px"></i> Phone: +962 799208555<br>
     <i class="fa fa-envelope w3-text-red" style="width:30px"> </i> Email: Speedcars@gmail.com<br>
 
-    <form action="/sendMessage" target="_blank" method="POST">
+    <form action="/sendMessage" method="POST">
       @csrf
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="name"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="email"></p>

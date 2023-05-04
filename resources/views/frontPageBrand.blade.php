@@ -1,4 +1,4 @@
-<div class="w3-third w3-margin-bottom" style="height: 460px; ">
+<div class="w3-third w3-margin-bottom">
     <img src="/{{$brand->imagePath}}" alt="{{$brand->brandName}}" width="100%">
     <div class="w3-container w3-white">
       <h3 style="text-align: center">{{$brand->brandName}}</h3>
