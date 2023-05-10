@@ -18,7 +18,7 @@
     @foreach($cars as $car)
     <tr style="border: 1px solid #000;">
       <td>{{$car->id}}</td>
-      <td>{{$car->brandName}}</td>
+      <td>{{$car->brand->brandName}}</td>
       <td>{{$car->model}}</td>
       <td>{{$car->color}}</td>
       <td>  

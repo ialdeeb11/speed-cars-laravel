@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brand;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -13,7 +14,7 @@ class brandsController extends Controller
 
 
 
-$brands = DB::table('Brands')->get();
+$brands = Brand::all();
 
 
 
@@ -28,7 +29,7 @@ public function create()
 
 public function add(Request $request)
 {
-    DB::table('brands')->insert([
+    Brand::insert([
         'brandName' => $request->brandName,
         'imagePath' => $request->imagePath,
         
@@ -41,14 +42,14 @@ public function add(Request $request)
 
 public function view($id)
 {
-    $brand = DB::table('brands')->where('id',$id)->first();
+    $brand = Brand::find($id);
    return view('admin.brands.view',['brand' => $brand]);
 }
 
 public function update(Request $request,$id)
 {
     
-    DB::table('brands')->where('id',$id)->update([
+    Brand::find($id)->update([
         'brandName' => $request->brandName,
         'imagePath' => $request->imagePath,
        
@@ -60,7 +61,7 @@ public function update(Request $request,$id)
 
 public function delete($id){
 
-    DB::table('brands')->where('id',$id)->delete();
+    Brand::find($id)->delete();
     return redirect('/admin/brands');
 
 

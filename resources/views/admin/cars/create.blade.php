@@ -6,11 +6,13 @@
 <form action="/admin/add-car" method="POST">
     @csrf
 
-    <select name="brandID">
+    <select name="brand_id">
       @foreach ($brands as $brand)
       <option value="{{$brand->id}}">{{$brand->brandName}}</option>
       @endforeach
     </select>
+    or
+    <button  onclick="document.location='/admin/create-brand'">Create new Brand</button>
     <br><br>
     <label for="color">color:</label><br>
     <input type="text"  name="color" value=""><br><br>

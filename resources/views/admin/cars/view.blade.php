@@ -6,13 +6,15 @@
 
 <form action="/admin/update-car/{{$car->id}}" method="POST">
     @csrf
-
-    <select name="brandID">
+    <label for="brand_id">Brand:</label><br>
+    <select name="brand_id">
       @foreach ($brands as $brand)
-      <option @if($car->brandID == $brand->id)selected @endif value="{{$brand->id}}">{{$brand->brandName}}</option>
+      <option @if($car->brand_id == $brand->id)selected @endif value="{{$brand->id}}">{{$brand->brandName}}</option>
       @endforeach
     </select>
-
+    or
+    <button  onclick="document.location='/admin/create-brand'">Create new Brand</button>
+    <br><br>
     <label for="color">color:</label><br>
     <input type="text"  name="color" value="{{$car->color}}"><br><br>
     <label for="model">model:</label><br>
@@ -63,9 +65,3 @@
 
 
 
-
-<select name="brand_id">
-  @foreach($brands as $brand)
-  <option @if($car->brand_id == $brand->id)selected @endif value="{{$brand->id}}">{{$brand->brandName}}</option>
-  @endforeach
-</select>

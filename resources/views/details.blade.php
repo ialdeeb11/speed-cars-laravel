@@ -8,7 +8,7 @@
 <h1 style="margin-left: 75px ;margin-top: 100px;" class="w3-sans-serif rounded mx-auto d-block" >{{$car->brandName}} {{$car->model}} {{$car->year}} - {{$car->price}}$</h1>
 
 <img src="/{{$car->imagePath}}" alt="{{$car->model}} {{$car->year}}" class="fullImage" >
-<img src="/{{$car->brandImagePath}}" alt="{{$car->model}} {{$car->year}}" class="fullImage" >
+<img src="/{{$car->brand->imagePath}}" alt="{{$car->model}} {{$car->year}}" class="fullImage" >
 
 
 
@@ -18,7 +18,7 @@
  
     <tr>
       <td>Car Make</td>
-      <td>{{$car->brandName}}</td>
+      <td>{{$car->brand->brandName}}</td>
     </tr>
     <tr>
         <td>Model</td>

@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Brand;
+use App\Models\Car;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -16,42 +19,42 @@ class DatabaseSeeder extends Seeder
 
 
         
-        DB::table('brands')->insert([
+        Brand::insert([
             'brandName'=> 'Hyundai',
             'imagePath'=>'photos/hyundailogo.jpg',
             'frontPage'=>1,
            
         ]);
 
-        DB::table('brands')->insert([
+        Brand::insert([
             'brandName'=> 'Mitsubishi',
             'imagePath'=>'photos/mitsubishilogo.jpg',
             'frontPage'=>1,
            
         ]);
 
-        DB::table('brands')->insert([
+        Brand::insert([
             'brandName'=> 'Honda',
             'imagePath'=>'photos/hondalogo.jpg',
             'frontPage'=>1,
            
         ]);
 
-        DB::table('brands')->insert([
+        Brand::insert([
             'brandName'=> 'Nissan',
             'imagePath'=>'photos/nissanlogo.jpg',
             'frontPage'=>0,
            
         ]);
 
-        DB::table('brands')->insert([
+        Brand::insert([
             'brandName'=> 'BMW',
             'imagePath'=>'photos/bmw-logo.jpg',
             'frontPage'=>0,
            
         ]);
 
-        DB::table('brands')->insert([
+        Brand::insert([
             'brandName'=> 'Toyota',
             'imagePath'=>'photos/toyota-logo.jpg',
             'frontPage'=>0,
@@ -60,8 +63,8 @@ class DatabaseSeeder extends Seeder
 
 
 
-        DB::table('cars')->insert([
-            'brandID'=>1,
+        Car::insert([
+            'brand_id'=>1,
             'model'=>'Accent',
             'year'=>1995,
             'price'=>3000,
@@ -74,8 +77,8 @@ class DatabaseSeeder extends Seeder
             'frontPage'=>0,
         ]);
 
-        DB::table('cars')->insert([
-            'brandID'=>2,
+        Car::insert([
+            'brand_id'=>2,
             'model'=>'Lancer',
             'year'=>1999,
             'price'=>5000,
@@ -88,8 +91,8 @@ class DatabaseSeeder extends Seeder
             'frontPage'=>1,
         ]);
 
-        DB::table('cars')->insert([
-            'brandID'=>1,
+        Car::insert([
+            'brand_id'=>1,
             'model'=>'Accent',
             'year'=>2018,
             'price'=>12000,
@@ -102,8 +105,8 @@ class DatabaseSeeder extends Seeder
             'frontPage'=>1,
         ]);
 
-        DB::table('cars')->insert([
-            'brandID'=>5,
+        Car::insert([
+            'brand_id'=>5,
             'model'=>'320',
             'year'=>2010,
             'price'=>15000,
@@ -116,8 +119,8 @@ class DatabaseSeeder extends Seeder
             'frontPage'=>1,
         ]);
 
-        DB::table('cars')->insert([
-            'brandID'=>6,
+        Car::insert([
+            'brand_id'=>6,
             'model'=>'Camry',
             'year'=>2010,
             'price'=>14000,
@@ -130,8 +133,8 @@ class DatabaseSeeder extends Seeder
             'frontPage'=>1,
         ]);
 
-        DB::table('cars')->insert([
-            'brandID'=>3,
+        Car::insert([
+            'brand_id'=>3,
             'model'=>'Civic',
             'year'=>2011,
             'price'=>11000,
@@ -144,8 +147,8 @@ class DatabaseSeeder extends Seeder
             'frontPage'=>1,
         ]);
 
-        DB::table('cars')->insert([
-            'brandID'=>4,
+        Car::insert([
+            'brand_id'=>4,
             'model'=>'Sunny',
             'year'=>2006,
             'price'=>7000,

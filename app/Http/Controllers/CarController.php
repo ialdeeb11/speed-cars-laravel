@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Brand;
+use App\Models\Car;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -10,8 +11,8 @@ class CarController extends Controller
 {
     public function index()
     {
-        $frontPageCars = DB::table('cars')->where('frontPage',1)->get();
-        $frontPageBrands = DB::table('brands')->where('frontPage',1)->get();
+        $frontPageCars = Car::where('frontPage',1)->get();
+        $frontPageBrands = Brand::where('frontPage',1)->get();
 
         return view('index', ['showAbout' => true ,'title'=>'Speed-Cars','frontPageCars'=>$frontPageCars,'frontPageBrands'=>$frontPageBrands]);
     }
@@ -20,8 +21,7 @@ class CarController extends Controller
     {
         
 
-        $query = DB::table('cars')
-        ->join('brands', 'cars.brandID', '=', 'brands.id')
+        $query = Car::join('brands', 'cars.brand_id', '=', 'brands.id')
         ->select('cars.*','brands.imagePath as brandImagePath','brands.brandName as brandName');
 
 
@@ -51,10 +51,7 @@ class CarController extends Controller
     public function carDetails($id)
     {
 
-        $car = DB::table('cars')->where('cars.id',$id)
-        ->join('brands', 'cars.brandID', '=', 'brands.id')
-        ->select('cars.*','brands.imagePath as brandImagePath','brands.brandName as brandName')
-        ->first();
+        $car = Car::with('brand')->find($id);
 
 
         return view('details', ['showAbout' => false ,'title'=>'Speed-Cars', 'car'=>$car]);
@@ -62,18 +59,13 @@ class CarController extends Controller
 
 
 
-    public function brandsList(Request $request)
+    public function brandsList()
     {
 
-        if($request->search){
-            $brands = DB::table('brands')
-            ->where('brandName','like',"%$request->search%")
-            ->get();
+        
 
-        }else{
-
-            $brands = DB::table('brands')->get();
-        }
+            $brands = Brand::all();
+        
     
 
 

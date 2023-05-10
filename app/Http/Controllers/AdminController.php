@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brand;
+use App\Models\Car;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -21,9 +24,7 @@ class AdminController extends Controller
 
 
 
-        $cars = DB::table('cars')
-        ->join('brands', 'cars.brandID', '=', 'brands.id')
-        ->select('cars.*','brands.imagePath as brandImagePath','brands.brandName as brandName')
+        $cars = Car::with('brand')
         ->get();
     
 
@@ -36,7 +37,7 @@ class AdminController extends Controller
     public function create()
     {
 
-        $brands = DB::table('brands')->get();
+        $brands = Brand::all();
 
        return view('admin.cars.create',['brands'=>$brands]);
     }
@@ -44,8 +45,8 @@ class AdminController extends Controller
 
     public function add(Request $request)
     {
-        DB::table('cars')->insert([
-            'brandID' => $request->brandID,
+        Car::insert([
+            'brand_id' => $request->brand_id,
             'model' => $request->model,
             'year' => $request->year,
             'price' => $request->price,
@@ -67,8 +68,8 @@ class AdminController extends Controller
 
     public function view($id)
     {
-        $car = DB::table('cars')->where('id',$id)->first();
-        $brands = DB::table('brands')->get();
+        $car = Car::find($id);
+        $brands = Brand::all();
 
        return view('admin.cars.view',['car' => $car,'brands'=>$brands]);
     }
@@ -76,8 +77,8 @@ class AdminController extends Controller
     public function update(Request $request,$id)
     {
         
-        DB::table('cars')->where('id',$id)->update([
-            'brandID' => $request->brandID,
+        Car::find($id)->update([
+            'brand_id' => $request->brand_id,
             'model' => $request->model,
             'year' => $request->year,
             'price' => $request->price,
@@ -98,7 +99,7 @@ class AdminController extends Controller
 
     public function delete($id){
 
-        DB::table('cars')->where('id',$id)->delete();
+        Car::find($id)->delete();
         return redirect('/admin/cars');
 
 
@@ -108,7 +109,7 @@ class AdminController extends Controller
 
     public function sendMessage(Request $request){
 
-        DB::table('contact')->insert([
+        Contact::insert([
             'name' => $request->name,
             'email' => $request->email,
             'message' => $request->message,
@@ -123,7 +124,7 @@ class AdminController extends Controller
     public function viewMessages()
     {
 
-        $messages = DB::table('contact')->get();
+        $messages = Contact::all();
 
         return view('admin.contact.list',['messages'=>$messages]);
     }
@@ -131,7 +132,7 @@ class AdminController extends Controller
 
     public function deleteMessage($id){
 
-        DB::table('contact')->where('id',$id)->delete();
+        Contact::find($id)->delete();
         return redirect('/admin/messages');
 
 
