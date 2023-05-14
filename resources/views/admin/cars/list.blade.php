@@ -19,7 +19,7 @@
     <tr style="border: 1px solid #000;">
       <td>{{$car->id}}</td>
       <td>{{$car->brand->brandName}}</td>
-      <td>{{$car->model}}</td>
+      <td>{{$car->model->modelName}}</td>
       <td>{{$car->color}}</td>
       <td>  
 

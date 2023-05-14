@@ -5,18 +5,25 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Car extends Model
+class Model_year extends Model
 {
+    protected $table = 'models';
+
+
     public function brand(): BelongsTo
     {
         return $this->belongsTo(Brand::class);
     }
 
 
-    public function model(): BelongsTo
+
+    public function car():HasMany
+
     {
-        return $this->belongsTo(Model_year::class,'model_id');
+
+        return $this->hasMany(Car::class);
+
     }
 }

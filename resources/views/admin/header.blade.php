@@ -25,6 +25,7 @@ margin-top: 50px ; background-color: #d3d3d3;}
   <a href="/" class="w3-bar-item w3-button w3-red w3-mobile"><img class = "logo" src="/photos/logo.png" alt="car logo" width="60" height="40" ></i>Speed Cars</a>
   <a href="/admin/cars" class="w3-bar-item w3-button w3-mobile">Cars</a>
   <a href="/admin/brands" class="w3-bar-item w3-button w3-mobile">Brands</a>
+  <a href="/admin/models" class="w3-bar-item w3-button w3-mobile">Models</a>
   <a href="/admin/messages" class="w3-bar-item w3-button w3-mobile">Messages</a>
 
   

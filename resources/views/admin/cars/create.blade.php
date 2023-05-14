@@ -14,27 +14,26 @@
     or
     <button  onclick="document.location='/admin/create-brand'">Create new Brand</button>
     <br><br>
+
+    <label for="model_id">model:</label><br>
+    <select name="model_id">
+      @foreach ($models as $model)
+      <option  value="{{$model->id}}">{{$model->name}}</option>
+      @endforeach
+    </select>
+    or
+    <button  onclick="document.location='/admin/??????'">Create new Model</button>
+    <br><br>
+
+
     <label for="color">color:</label><br>
     <input type="text"  name="color" value=""><br><br>
-    <label for="model">model:</label><br>
-    <input type="text"  name="model" value=""><br><br>
-
-    <label for="year">year:</label><br>
-    <input type="number"  name="year" value=""><br><br>
+  
 
     <label for="price">price:</label><br>
     <input type="number"  name="price" value=""><br><br>
 
-    <label for="motorSize">motorSize:</label><br>
-    <input type="number"  name="motorSize" value=""><br><br>
-
-
-    <label for="gear">gear:</label><br>
-    <input type="text"  name="gear" value=""><br><br>
-
-
-    <label for="fuel">fuel:</label><br>
-    <input type="text"  name="fuel" value=""><br><br>
+  
 
     
     <label for="used">used:</label><br>

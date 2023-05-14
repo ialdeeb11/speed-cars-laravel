@@ -15,6 +15,10 @@ return new class extends Migration
             $table->unsignedBigInteger('brand_id')->nullable();
 
             $table->foreign('brand_id')->references('id')->on('brands');
+
+            $table->unsignedBigInteger('model_id')->nullable();
+
+            $table->foreign('model_id')->references('id')->on('models');
         });
     }
 

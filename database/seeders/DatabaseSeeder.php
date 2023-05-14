@@ -6,6 +6,8 @@ namespace Database\Seeders;
 
 use App\Models\Brand;
 use App\Models\Car;
+use App\Models\Model_year;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -62,16 +64,81 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
+    
+        Model_year::insert([
+            'brand_id'=>1,
+            'name'=>'Accent1995',
+            'modelName'=>'Accent',
+            'year'=>1995,
+            'motorSize'=>1500,
+            'gear'=>'Manual',
+            'fuel'=>'Gasoline',]);
+
+
+        Model_year::insert([
+            'brand_id'=>1,
+            'name'=>'Accent2018',
+            'modelName'=>'Accent',
+            'year'=>2018,
+            'motorSize'=>1800,
+            'gear'=>'Automatic',
+            'fuel'=>'Gasoline',]);
+            
+        Model_year::insert([
+            'brand_id'=>2,
+            'name'=>'Lancer1999',
+            'modelName'=>'Lancer',
+            'year'=>1999,
+            'motorSize'=>1500,
+            'gear'=>'Automatic',
+            'fuel'=>'Gasoline',]);
+            
+        Model_year::insert([
+            'brand_id'=>5,
+            'name'=>'BMW320',
+            'modelName'=>'320',
+            'year'=>2010,
+            'motorSize'=>2000,
+            'gear'=>'Automatic',
+            'fuel'=>'Gasoline',]);
+
+        Model_year::insert([
+            'brand_id'=>6,
+            'name'=>'Camry2010',
+            'modelName'=>'Camry',
+            'year'=>2010,
+            'motorSize'=>2000,
+            'gear'=>'Automatic',
+            'fuel'=>'Hybrid',]);
+
+        Model_year::insert([
+            'brand_id'=>3,
+            'name'=>'Civic2011',
+            'modelName'=>'Civic',
+            'year'=>2011,
+            'motorSize'=>1800,
+            'gear'=>'Automatic',
+            'fuel'=>'Gasoline',]);
+
+        Model_year::insert([
+            'brand_id'=>5,
+            'name'=>'Sunny2006',
+            'modelName'=>'Sunny',
+            'year'=>2006,
+            'motorSize'=>1500,
+            'gear'=>'Automatic',
+            'fuel'=>'Gasoline',]);
+
+    
 
         Car::insert([
             'brand_id'=>1,
-            'model'=>'Accent',
-            'year'=>1995,
+            'model_id'=>1,
             'price'=>3000,
-            'motorSize'=>1500,
-            'gear'=>'Manual',
+            
+           
             'color'=>'White',
-            'fuel'=>'Gasoline',
+            
             'used'=>'Used',
             'imagePath'=>'photos/accent 1995.jpg',
             'frontPage'=>0,
@@ -79,13 +146,12 @@ class DatabaseSeeder extends Seeder
 
         Car::insert([
             'brand_id'=>2,
-            'model'=>'Lancer',
-            'year'=>1999,
+            'model_id'=>3,
             'price'=>5000,
-            'motorSize'=>1500,
-            'gear'=>'Automatic',
+            
+           
             'color'=>'Gray',
-            'fuel'=>'Gasoline',
+            
             'used'=>'Used',
             'imagePath'=>'photos/lancer 1999.jpg',
             'frontPage'=>1,
@@ -93,13 +159,12 @@ class DatabaseSeeder extends Seeder
 
         Car::insert([
             'brand_id'=>1,
-            'model'=>'Accent',
-            'year'=>2018,
+            'model_id'=>2,
             'price'=>12000,
-            'motorSize'=>1800,
-            'gear'=>'Automatic',
+            
+           
             'color'=>'Paige',
-            'fuel'=>'Gasoline',
+            
             'used'=>'Used',
             'imagePath'=>'photos/accent 2018.jpg',
             'frontPage'=>1,
@@ -107,13 +172,12 @@ class DatabaseSeeder extends Seeder
 
         Car::insert([
             'brand_id'=>5,
-            'model'=>'320',
-            'year'=>2010,
+            'model_id'=>4,
             'price'=>15000,
-            'motorSize'=>2000,
-            'gear'=>'Automatic',
+            
+           
             'color'=>'Silver',
-            'fuel'=>'Gasoline',
+            
             'used'=>'Used',
             'imagePath'=>'photos/bmw320_2010.jpg',
             'frontPage'=>1,
@@ -121,13 +185,12 @@ class DatabaseSeeder extends Seeder
 
         Car::insert([
             'brand_id'=>6,
-            'model'=>'Camry',
-            'year'=>2010,
+            'model_id'=>5,
             'price'=>14000,
-            'motorSize'=>2000,
-            'gear'=>'Automatic',
+            
+           
             'color'=>'Red',
-            'fuel'=>'Hybrid',
+            
             'used'=>'Used',
             'imagePath'=>'photos/toyota_camry2010.jpg',
             'frontPage'=>1,
@@ -135,13 +198,12 @@ class DatabaseSeeder extends Seeder
 
         Car::insert([
             'brand_id'=>3,
-            'model'=>'Civic',
-            'year'=>2011,
+            'model_id'=>6,
             'price'=>11000,
-            'motorSize'=>1800,
-            'gear'=>'Automatic',
+            
+           
             'color'=>'Blue',
-            'fuel'=>'Gasoline',
+            
             'used'=>'Used',
             'imagePath'=>'photos/hondacivic2011.jpg',
             'frontPage'=>1,
@@ -149,13 +211,12 @@ class DatabaseSeeder extends Seeder
 
         Car::insert([
             'brand_id'=>4,
-            'model'=>'Sunny',
-            'year'=>2006,
+            'model_id'=>7,
             'price'=>7000,
-            'motorSize'=>1500,
-            'gear'=>'Automatic',
+            
+           
             'color'=>'Black',
-            'fuel'=>'Gasoline',
+            
             'used'=>'Used',
             'imagePath'=>'photos/2006-nissan-sunny.jpg',
             'frontPage'=>0,

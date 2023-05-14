@@ -51,7 +51,7 @@ class CarController extends Controller
     public function carDetails($id)
     {
 
-        $car = Car::with('brand')->find($id);
+        $car = Car::find($id);
 
 
         return view('details', ['showAbout' => false ,'title'=>'Speed-Cars', 'car'=>$car]);

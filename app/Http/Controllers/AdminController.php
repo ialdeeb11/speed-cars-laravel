@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Brand;
 use App\Models\Car;
 use App\Models\Contact;
+use App\Models\Model_year;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -24,8 +25,7 @@ class AdminController extends Controller
 
 
 
-        $cars = Car::with('brand')
-        ->get();
+        $cars = Car::all();
     
 
 
@@ -38,8 +38,9 @@ class AdminController extends Controller
     {
 
         $brands = Brand::all();
+        $models = Model_year::all();
 
-       return view('admin.cars.create',['brands'=>$brands]);
+       return view('admin.cars.create',['brands'=>$brands,'models'=>$models]);
     }
 
 
@@ -47,13 +48,11 @@ class AdminController extends Controller
     {
         Car::insert([
             'brand_id' => $request->brand_id,
-            'model' => $request->model,
-            'year' => $request->year,
+            'model_id' => $request->model_id,
+            
             'price' => $request->price,
             'color' => $request->color,
-            'motorSize' => $request->motorSize,
-            'gear' => $request->gear,
-            'fuel' => $request->fuel,
+            
             'used' => $request->used,
             'imagePath' => $request->imagePath,
             'frontPage' => $request->frontPage,
@@ -70,8 +69,9 @@ class AdminController extends Controller
     {
         $car = Car::find($id);
         $brands = Brand::all();
+        $models = Model_year::all();
 
-       return view('admin.cars.view',['car' => $car,'brands'=>$brands]);
+       return view('admin.cars.view',['car' => $car,'brands'=>$brands,'models'=>$models]);
     }
 
     public function update(Request $request,$id)
@@ -79,13 +79,11 @@ class AdminController extends Controller
         
         Car::find($id)->update([
             'brand_id' => $request->brand_id,
-            'model' => $request->model,
-            'year' => $request->year,
+            'model_id' => $request->model_id,
+            
             'price' => $request->price,
             'color' => $request->color,
-            'motorSize' => $request->motorSize,
-            'gear' => $request->gear,
-            'fuel' => $request->fuel,
+            
             'used' => $request->used,
             'imagePath' => $request->imagePath,
             'frontPage' => $request->frontPage,

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\brandsController;
+use App\Http\Controllers\modelsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +48,16 @@ Route::post('/admin/add-brand', [brandsController::class,'add']);
 Route::delete('/admin/delete-brand/{id}', [brandsController::class,'delete']);
 Route::get('/admin/view-brand/{id}', [brandsController::class,'view']);
 Route::post('/admin/update-brand/{id}', [brandsController::class,'update']);
+
+
+
+// models
+Route::get('/admin/models', [modelsController::class,'modelsList']);
+Route::get('/admin/create-model', [modelsController::class,'create']);
+Route::post('/admin/add-model', [modelsController::class,'add']);
+Route::delete('/admin/delete-model/{id}', [modelsController::class,'delete']);
+Route::get('/admin/view-model/{id}', [modelsController::class,'view']);
+Route::post('/admin/update-model/{id}', [modelsController::class,'update']);
 
 
 
