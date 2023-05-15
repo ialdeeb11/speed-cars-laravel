@@ -36,7 +36,7 @@ public function add(Request $request)
     ]);
 
 
-    return redirect('/admin/brands');
+    return redirect('/admin/create-model');
 }
 
 

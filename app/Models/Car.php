@@ -19,4 +19,12 @@ class Car extends Model
     {
         return $this->belongsTo(Model_year::class,'model_id');
     }
+
+
+    protected $fillable = ['brand_id','model_id','price','color','used','imagePath','frontPage'];
+
+    public $timestamps = false;
 }
+
+
+

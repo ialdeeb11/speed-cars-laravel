@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::table('cars', function (Blueprint $table) {
             $table->unsignedBigInteger('brand_id')->nullable();
 
-            $table->foreign('brand_id')->references('id')->on('brands');
+            $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade');
 
             $table->unsignedBigInteger('model_id')->nullable();
 
-            $table->foreign('model_id')->references('id')->on('models');
+            $table->foreign('model_id')->references('id')->on('models')->onDelete('cascade');
         });
     }
 

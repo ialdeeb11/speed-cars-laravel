@@ -26,4 +26,9 @@ class Model_year extends Model
         return $this->hasMany(Car::class);
 
     }
+
+
+    protected $fillable = ['name','modelName','year','motorSize','gear','fuel','brand_id'];
+
+    public $timestamps = false;
 }

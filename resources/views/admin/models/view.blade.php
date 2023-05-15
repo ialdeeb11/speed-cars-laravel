@@ -6,6 +6,18 @@
 
 <form action="/admin/update-model/{{$model->id}}" method="POST">
     @csrf
+
+
+    <label for="brand_id">Brand:</label><br>
+    <select name="brand_id">
+      @foreach ($brands as $brand)
+      <option @if($model->brand_id == $brand->id)selected @endif value="{{$brand->id}}">{{$brand->brandName}}</option>
+      @endforeach
+    </select>
+    or
+    <button  onclick="document.location='/admin/create-brand'"type="button">Create new Brand</button>
+    <br><br>
+
     <label for="Name">Name:</label><br>
     <input type="text"  name="name" value="{{$model->name}}"><br><br>
 

@@ -13,7 +13,7 @@
       @endforeach
     </select>
     or
-    <button  onclick="document.location='/admin/create-brand'">Create new Brand</button>
+    <button  onclick="document.location='/admin/create-brand'"type="button">Create new Brand</button>
     <br><br>
     
     <label for="model_id">model:</label><br>
@@ -23,7 +23,7 @@
       @endforeach
     </select>
     or
-    <button  onclick="document.location='/admin/create-model'">Create new Model</button>
+    <button  onclick="document.location='/admin/create-model'"type="button">Create new Model</button>
 
     <br><br>
     <label for="color">color:</label><br>

@@ -16,4 +16,15 @@ class Brand extends Model
 
     }
 
+    public function model():HasMany
+
+    {
+
+        return $this->hasMany(Model_year::class);
+
+    }
+
+    protected $fillable = ['brandName','imagePath','frontPage'];
+
+    public $timestamps = false;
 }

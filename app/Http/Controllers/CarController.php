@@ -22,7 +22,7 @@ class CarController extends Controller
         
 
         $query = Car::join('brands', 'cars.brand_id', '=', 'brands.id')
-        ->select('cars.*','brands.imagePath as brandImagePath','brands.brandName as brandName');
+        ->select('cars.*','brands.imagePath as brandImagePath','brands.brandName as brandName',);
 
 
         if($brandName){
